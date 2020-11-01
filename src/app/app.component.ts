@@ -8,12 +8,7 @@ import { Quote } from './quote';
 })
 export class AppComponent {
   title = 'Quotes';
-  quotes:Quote[] = [
-    {id:1, name:'The work proves the crafts man'},
-    {id:2, name:'Times moves slowly but passes quickly'},
-    {id:3, name:'To be fond of learning is to be near to knowledge'},
- 
-    ];
+  
   } 
 
 
