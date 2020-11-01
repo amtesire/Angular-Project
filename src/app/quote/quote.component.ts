@@ -8,7 +8,7 @@ import { Quote } from '../quote';
 })
 export class QuoteComponent implements OnInit {
   quotes:Quote[] = [
-    new Quote(1,'The work proves the crafts man','Will Smith', new Date(2020,3,14)),
+    new Quote(1,'The work proves the crafts man','Will Smith', new Date(2017,3,14)),
     new Quote(2,'Times moves slowly but passes quickly','Maite Perroni', new Date(2019,6,9)),
     new Quote(3,'To be fond of learning is to be near to knowledge','Luther King', new Date(2018,1,12)),
  
@@ -23,6 +23,15 @@ export class QuoteComponent implements OnInit {
       }
     }
 
+    deleteQuote(isComplete, index){
+      if (isComplete) {
+        let toDelete = confirm(`Are you sure you want to delete ${this.quotes[index].name}?`)
+  
+        if (toDelete){
+          this.quotes.splice(index,1)
+        }
+      }
+    }
   constructor() { }
 
   ngOnInit(): void {
