@@ -8,9 +8,9 @@ import { Quote } from '../quote';
 })
 export class QuoteComponent implements OnInit {
   quotes:Quote[] = [
-    new Quote(1,'The work proves the crafts man','Will Smith', new Date(2017,3,14)),
-    new Quote(2,'Times moves slowly but passes quickly','Maite Perroni', new Date(2019,6,9)),
-    new Quote(3,'To be fond of learning is to be near to knowledge','Luther King', new Date(2018,1,12)),
+    new Quote(1,'The work proves the crafts man','Will Smith',0,0, new Date(2017,3,14)),
+    new Quote(2,'Times moves slowly but passes quickly','Maite Perroni',0,0, new Date(2019,6,9)),
+    new Quote(3,'To be fond of learning is to be near to knowledge','Luther King',0,0, new Date(2018,1,12)),
  
     ];
 
