@@ -17,11 +17,7 @@ export class QuoteComponent implements OnInit {
     toggleDetails(index){
       this.quotes[index].showAuthor = !this.quotes[index].showAuthor;
     }
-    completeQuote(isComplete, index){
-      if (isComplete) {
-        this.quotes.splice(index,1);
-      }
-    }
+    
 
     deleteQuote(isComplete, index){
       if (isComplete) {
@@ -32,6 +28,12 @@ export class QuoteComponent implements OnInit {
         }
       }
     }
+
+    addNewQuote(quote){
+      let quoteLength = this.quotes.length;
+      this.quotes.push(quote)
+    }
+
   constructor() { }
 
   ngOnInit(): void {
