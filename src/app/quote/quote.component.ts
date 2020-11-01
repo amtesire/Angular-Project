@@ -8,12 +8,20 @@ import { Quote } from '../quote';
 })
 export class QuoteComponent implements OnInit {
   quotes:Quote[] = [
-    {id:1, name:'The work proves the crafts man', author:'Will Smith'},
-    {id:2, name:'Times moves slowly but passes quickly', author:'Maite Perroni'},
-    {id:3, name:'To be fond of learning is to be near to knowledge', author:'Luther King'},
+    new Quote(1,'The work proves the crafts man','Will Smith', new Date(2020,3,14)),
+    new Quote(2,'Times moves slowly but passes quickly','Maite Perroni', new Date(2019,6,9)),
+    new Quote(3,'To be fond of learning is to be near to knowledge','Luther King', new Date(2018,1,12)),
  
     ];
 
+    toggleDetails(index){
+      this.quotes[index].showAuthor = !this.quotes[index].showAuthor;
+    }
+    completeQuote(isComplete, index){
+      if (isComplete) {
+        this.quotes.splice(index,1);
+      }
+    }
 
   constructor() { }
 
